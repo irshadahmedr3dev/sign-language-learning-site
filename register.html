@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - SLL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <p>Create an account</p>
+        <input type="text" id="regUsername" placeholder="Enter Username">
+        <input type="password" id="regPassword" placeholder="Enter Password">
+        <button onclick="register()">Register</button>
+        <p>Already have an account? <a href="index.html">Login</a></p>
+    </div>
+
+    <script>
+        function register() {
+            let username = document.getElementById("regUsername").value;
+            let password = document.getElementById("regPassword").value;
+
+            if (username && password) {
+                localStorage.setItem("username", username);
+                localStorage.setItem("password", password);
+                alert("Registration successful! You can now login.");
+                window.location.href = "index.html";
+            } else {
+                alert("Please enter a username and password.");
+            }
+        }
+    </script>
+</body>
+</html>

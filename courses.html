@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLL - Courses</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f9fafb;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      p {
+        color: #666;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+      }
+
+      .courses {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .course-box {
+        padding: 15px;
+        background-color: #6ec1e4;
+        color: white;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .course-box:hover {
+        background-color: #67b9a3;
+        transform: scale(1.05);
+      }
+
+      .spacer {
+        height: 20px;
+      }
+
+      .back-btn {
+        background-color: #ff6f61;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .back-btn:hover {
+        background-color: #e95a4e;
+        transform: scale(1.05);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        .course-box {
+          font-size: 1em;
+        }
+
+        .back-btn {
+          font-size: 1em;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Course</h1>
+        <p>Choose a sign language course to begin learning:</p>
+        <div class="courses">
+            <button class="course-box" onclick="goToEnglishCourse()">📘 English Sign Language</button>
+            <button class="course-box" onclick="goToTamilCourse()">📙 Tamil Sign Language</button>
+        </div>
+        <button class="back-btn" onclick="goBack()">🔙 Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

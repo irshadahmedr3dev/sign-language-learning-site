@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gesture Detection</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e3f2fd;  /* Soft blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+      background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    }
+
+    h2 {
+      color: white;
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    video {
+      border: 4px solid #ff7e5f;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    video:hover {
+      transform: scale(1.05);
+    }
+
+    #prediction {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 15px;
+      background-color: #ff7e5f;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    #prediction:hover {
+      background-color: #ff6347;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .footer a {
+      color: #ff7e5f;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #feb47b;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+        width: 90%;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      video {
+        max-width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Language Detection</h2>
+    <video id="videoElement" autoplay playsinline></video>
+    <p id="prediction">Prediction: </p>
+    <div class="footer">
+      <p>Want to learn more? <a href="index.html">Back to Login</a></p>
+    </div>
+  </div>
+
+  <script src="gesture.js"></script>
+</body>
+</html>

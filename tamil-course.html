@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamil Sign Language Course</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .lesson h2 {
+      font-size: 1.5em;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    video {
+      width: 100%;
+      max-height: 300px;
+      border: 2px solid #f2b94b;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    #progressText {
+      font-weight: bold;
+      color: #333;
+    }
+
+    progress {
+      width: 100%;
+      height: 20px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    progress::-webkit-progress-bar {
+      background-color: #eee;
+      border-radius: 10px;
+    }
+
+    progress::-webkit-progress-value {
+      background-color: #f2b94b;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #e95a4e;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.7em;
+      }
+
+      .lesson h2 {
+        font-size: 1.3em;
+      }
+
+      button {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Tamil Sign Language Course</h1>
+    <p>Learn essential sign language gestures with this interactive lesson.</p>
+
+    <!-- Video Section -->
+    <div class="lesson">
+      <h2>LEARN TAMIL SIGN LANGUAGE</h2>
+      <video id="courseVideo" controls>
+        <source src="tam.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Progress: <span id="progressText">0%</span></p>
+      <progress id="progressBar" value="0" max="100"></progress>
+    </div>
+
+    <button onclick="window.location.href='dashboard.html'">🔙 Back to Dashboard</button>
+  </div>
+
+  <!-- JavaScript to handle video progress -->
+  <script src="courseProgress.js"></script>
+</body>
+</html>

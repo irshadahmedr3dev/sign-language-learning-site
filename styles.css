@@ -1,0 +1,551 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #ff758c, #ff7eb3);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    animation: fadeIn 0.8s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Heading Styles */
+h1 {
+    color: #2c3e50;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+}
+
+/* Course Selection */
+.courses {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px; /* Adds spacing between buttons */
+    width: 80%;
+    margin: auto;
+}
+
+.course-box {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    text-align: left; /* Aligns text to the left */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #0ea75b;
+    transition: 0.3s;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if text overflows */
+}
+
+.course-box:hover {
+    background-color: #dcdcdc;
+}
+
+.back-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ffcc00;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #e6b800;
+}
+
+
+/* Lesson Cards */
+.lesson {
+    margin: 40px auto;
+    background: #f7f9fc;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.lesson:hover {
+    transform: scale(1.03);
+}
+
+.lesson h2 {
+    color: #34495e;
+    font-size: 22px;
+}
+
+.lesson img {
+    width: 160px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(120deg, #3498db, #6ab1e7);
+    color: white;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(120deg, #2980b9, #3b92d7);
+    transform: scale(1.05);
+}
+
+/* Back Button */
+.back-btn {
+    background: #e74c3c;
+    font-size: 16px;
+    margin-top : 20px;
+}
+
+.back-btn:hover {
+    background: #c0392b;
+}
+
+/* Dashboard Styling */
+.dashboard-container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 18px;
+    color: #444;
+    margin-top: 5px;
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: linear-gradient(135deg, #f9ca24, #f39c12);
+    color: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-card img {
+    width: 90px;
+    height: auto;
+}
+
+.dashboard-card h2 {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.dashboard-card:hover {
+    background: linear-gradient(135deg, #f7b731, #e67e22);
+    transform: scale(1.08);
+}
+
+/* Logout Button */
+.logout-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 260px;
+    margin-top: 25px;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+    transform: scale(1.08);
+}
+
+/* Gesture Detection Page */
+.gesture-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.video-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+video, canvas {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border: 4px solid #3498db;
+    border-radius: 15px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#gestureOutput {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .dashboard-container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .dashboard-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-card {
+        width: 85%;
+    }
+
+    .logout-btn {
+        width: 100%;
+    }
+
+    .course-box {
+        width: 100%;
+    }
+
+    .lesson img {
+        width: 120px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+.button-container {
+    margin-top: 60px; /* Moves the Back button lower */
+}
+.gesture-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+video, canvas {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 4px solid #3498db;
+    border-radius: 15px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for Detected Sign Box */
+.detected-sign-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.detected-sign-box h2 {
+    color: #34495e;
+    font-size: 22px;
+}
+
+.detected-sign-box p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 5px;
+}
+.spacer {
+    margin-bottom: 40px; /* Adjust the space as needed */
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Container Styling */
+.container {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    margin: 100px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+input {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Container Styling */
+.container {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    margin: 100px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+input {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.contributor {
+    background: #34495E; /* Darker gray-blue to match footer */
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 320px;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.contributor:hover {
+    transform: scale(1.05);
+}
+
+.contributor img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-right: 15px;
+}
+
+.info {
+    color: white;
+}
+
+.contributor a {
+    color: #1ABC9C; /* Light teal color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contributor a:hover {
+    text-decoration: underline;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+}
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.12);
+  }
+  
